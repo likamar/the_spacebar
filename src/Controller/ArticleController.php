@@ -21,7 +21,7 @@ class ArticleController
     public function show($slug)
     {
         return new Response(sprintf(
-            'Future page to show one space article: %s',
+            'Future page to show one space article %s',
             $slug
         ));
     }
