@@ -13,11 +13,11 @@ class ArticleController extends AbstractController //AbstractController helps to
      */
     public function homepage()
     {
-        return new Response('Hello world!');
+        return $this->render('article/homepage.html.twig');
     }
 
     /**
-     * @Route("/news/{slug}")
+     * @Route("/news/{slug}", name="article_show")
      */
     public function show($slug)
     {
