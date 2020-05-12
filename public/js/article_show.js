@@ -6,7 +6,14 @@ jQuery(document).ready(function () {
         var link = jQuery(event.currentTarget);
         link.toggleClass('fa-heart-o').toggleClass('fa-heart');
 
-        jQuery('.js-like-article-count').html('TEST');
+        jQuery.ajax({
+            method: 'POST',
+            url: link.attr('href')
+        }).done(function(data){
+            jQuery('.js-like-article-count').html(data.hearts);
+        })
+
+
     })
 
 })
