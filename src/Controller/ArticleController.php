@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticleController extends AbstractController //AbstractController helps to render templates
 {
     /**
-     * @Route("/")
+     * @Route("/", name="app_homepage")
      */
     public function homepage()
     {
